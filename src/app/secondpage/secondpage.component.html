@@ -1,0 +1,18 @@
+<div class="formfield">
+    <form name="submitdata" #submitdata="ngForm" (ngSubmit)="getvalue(submitdata.value); submitdata.resetForm()">
+        <input type="number" placeholder="Enter Number....." name="numbers" #numbers="ngModel" ngModel>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>
+<div class="flex">
+    <div class="text">
+        <h1>Number</h1>
+        <h3>{{text}}</h3>
+    </div>
+    <div class="history">
+        <div class="heading">
+            <h1>History</h1>
+        </div>
+        <h5 *ngFor="let data of storage">{{data.text}}</h5>
+    </div>
+</div>
